@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Ayoub</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#" >Services</a>
+            <a href="#" >Skills</a>
+            <a href="#" >Education</a>
+            <a href="#" >Experience</a>
+            <a href="#" >Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Ayoub</span></h1>
+            <h3 class="typing-text" id="typewriter-line">I'm a <span id="typewriter"></span></h3>
+            <p>Architecture student driven by creativity and precision, designing spaces that connect people, function, and context.
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+    <script>
+const words = [
+  "Architecte",
+  "Urban Explorer",
+  "3D Modeler",
+  "Designer",
+  "Visual Creator"
+];
+const articles = [
+  "an", // Architecte
+  "an", // Urban Explorer
+  "a",  // 3D Modeler
+  "a",  // Designer
+  "a"   // Visual Creator
+];
+const colors = [
+  "#b74b4b", // Architecte
+  "#b74b4b", // Urban Explorer
+  "#b74b4b", // 3D Modeler
+  "#b74b4b", // Designer
+  "#b74b4b"  // Visual Creator
+];
+let i = 0;
+let timer;
+
+function typingEffect(word, color, article) {
+  const typewriter = document.getElementById('typewriter');
+  const typewriterLine = document.getElementById('typewriter-line');
+  let charIndex = 0;
+  typewriter.innerHTML = "";
+  typewriter.style.color = color;
+  // Update the prefix (I'm a/an ...)
+  typewriterLine.innerHTML = `I'm ${article} <span id="typewriter"></span>`;
+  const newTypewriter = document.getElementById('typewriter');
+  timer = setInterval(() => {
+    if (charIndex < word.length) {
+      newTypewriter.innerHTML += word.charAt(charIndex);
+      charIndex++;
+    } else {
+      clearInterval(timer);
+      setTimeout(() => {
+        deletingEffect(word, color, article);
+      }, 2000); // Pause before deleting
+    }
+  }, 100);
+}
+
+function deletingEffect(word, color, article) {
+  const typewriter = document.getElementById('typewriter');
+  let charIndex = word.length;
+  timer = setInterval(() => {
+    if (charIndex > 0) {
+      typewriter.innerHTML = word.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      clearInterval(timer);
+      i = (i + 1) % words.length;
+      setTimeout(() => {
+        typingEffect(words[i], colors[i], articles[i]);
+      }, 500); // Pause before typing next word
+    }
+  }, 50);
+}
+
+// Start the animation
+typingEffect(words[i], colors[i], articles[i]);
+</script>
+</body>
+</html>
