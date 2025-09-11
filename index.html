@@ -1,109 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayoub Rachedi Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Ayoub</a>
-
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="">
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+  
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <div class="nav-indicator"></div>
+    </nav>
+  </header>
+  
+  <!-- Home Section -->
+  <section id="home" class="section home">
+    <div class="home-content">
+      <div class="home-img">
+        <img src="main.jpg" alt="Ayoub Rachedi">
+      </div>
+      <h1>Hi, I'm <span>Ayoub Rachedi</span></h1>
+      <h3 class="typing-text">I'm an <span id="typewriter"></span></h3>
+      <p>Architecture student driven by creativity and precision, designing spaces that connect people, function, and context.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ayoub-rachedi-57a985321/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/pooortgas" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/pooortgas" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/pooortgas" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ayrachedi" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <a href="mailto:ayoubrachedi35@gmail.com" class="btn">
+        <i class="fa-solid fa-envelope"></i> ayoubrachedi35@gmail.com
+      </a>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2 class="section-title">Services</h2>
+    <div class="cards">
+      <div class="card service-card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Web Design</h3>
+        <p>Modern, responsive, and creative web design for your brand or portfolio.</p>
+      </div>
+      <div class="card service-card">
+        <i class="fa-solid fa-cube"></i>
+        <h3>3D Modeling</h3>
+        <p>High-quality 3D models for architecture, visualization, and presentations.</p>
+      </div>
+      <div class="card service-card">
+        <i class="fa-solid fa-city"></i>
+        <h3>Urban Analysis</h3>
+        <p>Urban planning, site analysis, and spatial studies for better city design.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio / Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Modern Villa Design</h3>
+        <p>Conceptual design for a modern villa with sustainable features.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Urban Park Project</h3>
+        <p>Revitalization of an urban park with community spaces and green areas.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project3.jpg" alt="Project 3">
+        <h3>3D Interior Visualization</h3>
+        <p>Photorealistic 3D renders for interior design proposals.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Education Section -->
+  <section id="education" class="section edu-section">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-timeline">
+      <div class="edu-block fade-slide">
+        <div class="edu-year">2023</div>
+        <div class="edu-content">
+          <h3>Baccalauréat Scientifique</h3>
+          <p class="edu-detail">Average: <strong>15.32/20</strong></p>
         </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Ayoub</span></h1>
-            <h3 class="typing-text" id="typewriter-line">I'm a <span id="typewriter"></span></h3>
-            <p>Architecture student driven by creativity and precision, designing spaces that connect people, function, and context.
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="edu-block fade-slide">
+        <div class="edu-year">2023–2024</div>
+        <div class="edu-content">
+          <h3>1st Year in Architecture</h3>
+          <blockquote>
+            “My first year was a journey through time, where I walked alongside prehistoric and ancient civilizations.<br>
+            I discovered how they lived, how they built, and how their philosophies shaped the art of architecture.<br>
+            I learned to see the world with a new gaze — the gaze of composition, rhythm, perception, and the poetry hidden in every stone.”
+          </blockquote>
+        </div>
+      </div>
+      <div class="edu-block fade-slide">
+        <div class="edu-year">2024–2025</div>
+        <div class="edu-content">
+          <h3>2nd Year in Architecture</h3>
+          <blockquote>
+            “This year marked the beginning of my digital journey — using the computer as a tool to give shape to ideas.<br>
+            Each project became both a challenge and a story, and I started writing my learning through practice.”
+          </blockquote>
+          <div class="edu-projects">
+            <!-- Example project structure, add more as needed -->
+            <div class="edu-project">
+              <div class="project-title">Project Title</div>
+              <div class="project-summary">Short summary of what I learned after finishing.</div>
+              <a href="#" class="project-link" target="_blank">Document</a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+          </div>
         </div>
-    </section>
-    <script>
-const words = [
-  "Architecte",
-  "Urban Explorer",
-  "3D Modeler",
-  "Designer",
-  "Visual Creator"
-];
-const articles = [
-  "an", // Architecte
-  "an", // Urban Explorer
-  "a",  // 3D Modeler
-  "a",  // Designer
-  "a"   // Visual Creator
-];
-const colors = [
-  "#b74b4b", // Architecte
-  "#b74b4b", // Urban Explorer
-  "#b74b4b", // 3D Modeler
-  "#b74b4b", // Designer
-  "#b74b4b"  // Visual Creator
-];
-let i = 0;
-let timer;
-
-function typingEffect(word, color, article) {
-  const typewriter = document.getElementById('typewriter');
-  const typewriterLine = document.getElementById('typewriter-line');
-  let charIndex = 0;
-  typewriter.innerHTML = "";
-  typewriter.style.color = color;
-  // Update the prefix (I'm a/an ...)
-  typewriterLine.innerHTML = `I'm ${article} <span id="typewriter"></span>`;
-  const newTypewriter = document.getElementById('typewriter');
-  timer = setInterval(() => {
-    if (charIndex < word.length) {
-      newTypewriter.innerHTML += word.charAt(charIndex);
-      charIndex++;
-    } else {
-      clearInterval(timer);
-      setTimeout(() => {
-        deletingEffect(word, color, article);
-      }, 2000); // Pause before deleting
-    }
-  }, 100);
-}
-
-function deletingEffect(word, color, article) {
-  const typewriter = document.getElementById('typewriter');
-  let charIndex = word.length;
-  timer = setInterval(() => {
-    if (charIndex > 0) {
-      typewriter.innerHTML = word.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      clearInterval(timer);
-      i = (i + 1) % words.length;
-      setTimeout(() => {
-        typingEffect(words[i], colors[i], articles[i]);
-      }, 500); // Pause before typing next word
-    }
-  }, 50);
-}
-
-// Start the animation
-typingEffect(words[i], colors[i], articles[i]);
-</script>
+      </div>
+    </div>
+    <!-- Decorative shapes -->
+    <div class="edu-stickers">
+      <div class="sticker sticker-arch"></div>
+      <div class="sticker sticker-dot"></div>
+      <div class="sticker sticker-triangle"></div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <h2 class="section-title">Languages</h2>
+    <div class="lang-skills">
+      <div class="lang-bar fade-zoom">
+        <span class="lang-label">Arabic</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="--percent:100%">100%</div>
+        </div>
+      </div>
+      <div class="lang-bar fade-zoom">
+        <span class="lang-label">French</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="--percent:80%">80%</div>
+        </div>
+      </div>
+      <div class="lang-bar fade-zoom">
+        <span class="lang-label">English</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="--percent:70%">70%</div>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative shapes -->
+    <div class="skills-stickers">
+      <div class="sticker sticker-circle"></div>
+      <div class="sticker sticker-zigzag"></div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+  
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-dot" data-section="home" title="Home"></div>
+    <div class="scroll-dot" data-section="services" title="Services"></div>
+    <div class="scroll-dot" data-section="portfolio" title="Portfolio"></div>
+    <div class="scroll-dot" data-section="education" title="Education"></div>
+    <div class="scroll-dot" data-section="skills" title="Skills"></div>
+    <div class="scroll-dot" data-section="contact" title="Contact"></div>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
